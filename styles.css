@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 208, 180);
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/qBkkYr3.jpg");
+    background-size: cover;
+    min-height: 100px;
+}
+
+/* positions the social buttons */
+.right ul li{
+    display: inline-block;
+    width: 100%;
+    margin: 5px;
+  }
+ 
+ul.nav {
+    text-align: center;
+}
+
+/* keeps navigation centered and on one line */
+.nav li{
+    display: inline-flex;
+}
+
+.nav li a{
+    color: white;
+    text-transform: uppercase;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+h1 {
+    font-family: herculanum, serif;
+    font-style: bold;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: avenir, geneva, sans-serif;
+    font-size: 1.25em;
+}
+
+h3 {
+    font-family: avenir, geneva, sans-serif;
+    font-size: 2em;
+}
+
+p {
+    font-family: avenir, geneva, sans-serif;
+}
+
+iframe {
+    border: 0;
+}
+
+footer {
+    background-color: rgb(109, 52, 9);
+    text-align: center;
+}
+
+article {
+    flex: 2;
+    overflow-y: auto;
+}
+
+aside {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* height keeps thumbnails to a uniform height, width preserves aspect ratio */
+img.small {
+    height: 80px;
+    width: auto;
+}
+
+/* when images with class="small" (thumbnails) are hovered on, they are faded out */
+img.small:hover {
+    opacity: 0.75;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 150px;
+    }
+    
+    .nav .logo {
+        display: none;
+    }
+    
+    /* keeps list items on separate lines */
+    .nav li {
+        display: block;
+    }
+
+    footer {
+        min-height: 150px;
+    }
+
+    /* keeps holberton logo on one line for more neat appearance */
+    footer img {
+        display: block;
+        margin: 0 auto;
+    }
+}
